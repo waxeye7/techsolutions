@@ -5,16 +5,18 @@
     <div class="footer-section">
       <div class="flex">
         <div class="logo">
-          <img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt="Logo">
+          <a href="<?php echo home_url(); ?>">
+            <img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt="Logo">
+          </a>
         </div>
         <div class="tech-solutions">
           <h3>TechSolutions</h3>
         </div>
       </div>
 
-      <div class="contact-button">
-        <a href="#">Contact Us</a>
-      </div>
+      <a href="#"><div class="contact-button">
+        Contact Us
+      </div></a>
       
       <div class="footer-divider"></div>
 
@@ -24,11 +26,10 @@
 
     <div class="footer-section">
       <div class="footer-links">
-        <a href="#">Home</a>
-        <a href="#">Services</a>
-        <a href="#">About Us</a>
-        <a href="#">FAQ</a>
-        <a href="#">Contact Us</a>
+      <?php
+        $argument = array( 'theme_location' => 'footer' );
+        wp_nav_menu( $argument );
+      ?>
       </div>
       <div class="footer-divider"></div>
     </div>
