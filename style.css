@@ -37,16 +37,6 @@ a:hover {
   opacity: 0.75;
 }
 
-.content {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-.entry-header {
-  padding: 20px 0;
-}
-
 .entry-title {
   margin: 0;
   color: #333;
@@ -56,9 +46,6 @@ a:hover {
 .entry-content {
   background-color: #fff;
   color: #333;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
 }
 .site-header {
   width: 100%;
@@ -116,10 +103,14 @@ a:hover {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-left: 2px;
+  margin-right: 2px;
+}
+.footer-links ul li {
+  font-size: 14px;
 }
 
 .footer-links a {
-  margin: 5px;
   color: #fafafa;
   text-decoration: none;
   transition: color 0.3s ease-in-out;
@@ -173,7 +164,9 @@ a:hover {
   padding: 4px;
   border-radius: 4px;
 }
-
+.full-width {
+  width: 100%;
+}
 .post {
   background-color: #fff;
   color: black;
@@ -195,10 +188,6 @@ ul {
   margin: 0;
   padding: 0;
   list-style: none;
-}
-.team-list {
-  display: flex;
-  flex-direction: column;
 }
 
 .img-css-name {
@@ -246,20 +235,16 @@ ul {
 
 @media screen and (max-width: 1200px) {
   .footer-content {
-    width: 90%;
-  }
-}
-
-@media screen and (max-width: 850px) {
-  .footer-content {
-    width: 100%;
     flex-direction: column;
   }
   .footer-links {
     flex-direction: row;
+    margin-bottom: 14px;
+    margin-left: 0;
+    margin-right: 0;
   }
-  .footer-links * {
-    width: 70px;
+  .footer-links ul li {
+    font-size: 16px;
   }
   .footer-divider {
     display: none;
@@ -275,6 +260,39 @@ ul {
 
 @media screen and (max-width: 700px) {
   .menu li {
-    font-size: 10px;
+    font-size: 14px;
+  }
+  .site-name {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .menu li {
+    font-size: 13px;
+  }
+  .site-name {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .menu li {
+    font-size: 12px;
+  }
+  .site-name {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 460px) {
+  .menu li {
+    font-size: 14px;
+  }
+  .site-header {
+    justify-content: center;
+  }
+  .site-name {
+    display: none;
+  }
+  .remove-on-small {
+    display: none;
   }
 }

@@ -14,13 +14,13 @@
             <div class="flex relative">
     </div>
         <header class="site-header">
-            <a style="margin-right:10px;" href="<?php echo home_url(); ?>">
+            <a class="remove-on-small" style="margin-right:10px;" href="<?php echo home_url(); ?>">
                 <div style="max-width:50px; max-height:50px;">
                     <img src="<?php echo get_theme_image_url('logo.png'); ?>" alt="Home" style="width:100%; height:100%;" />
                 </div>
             </a>
 
-            <h2 class="heading" style="margin-right:20px;"><?php bloginfo('name'); ?></h2>
+            <h2 class="heading site-name" style="margin-right:20px;"><?php bloginfo('name'); ?></h2>
 
             
             <nav>

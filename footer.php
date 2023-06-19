@@ -35,7 +35,6 @@
     </div>
     
 
-
     <div class="footer-section">
     <div class="social-media-links">
         <a href="https://twitter.com" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/images/twitter.png" alt="Twitter"></a>
