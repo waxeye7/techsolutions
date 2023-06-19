@@ -19,8 +19,9 @@
                     <img src="<?php echo get_theme_image_url('logo.png'); ?>" alt="Home" style="width:100%; height:100%;" />
                 </div>
             </a>
-
-            <h2 class="heading site-name" style="margin-right:20px;"><?php bloginfo('name'); ?></h2>
+            <a class="remove-on-small" style="margin-right:10px;" href="<?php echo home_url(); ?>">
+                <h2 class="heading site-name" style="margin-right:20px;"><?php bloginfo('name'); ?></h2>
+            </a>
 
             
             <nav>

@@ -1,21 +1,24 @@
 <?php get_header(); ?>
 
-<main id="main" class="site-main">
-    <?php
-    if (have_posts()) :
-        while (have_posts()) : the_post(); ?>
-            <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-                <header class="entry-header">
-                    <h1 class="entry-title"><?php the_title(); ?></h1>
-                </header>
-
-                <div class="entry-content">
-                    <?php the_content(); ?>
+<?php
+if (have_posts()) {
+    while (have_posts()) {
+        the_post();
+        ?>
+        <div class="service-item-single">
+            <?php if (has_post_thumbnail()) { ?>
+                <div class="service-image" style="text-align:center;">
+                    <?php the_post_thumbnail('thumbnail');?>
                 </div>
-            </article>
-        <?php endwhile;
-    endif;
-    ?>
-</main>
+            <?php } ?>
+            <h1 class="service-title"><?php the_title(); ?></h1>
+            <div class="service-content">
+                <?php the_content(); ?>
+            </div>
+        </div>
+        <?php
+    }
+}
+?>
 
 <?php get_footer(); ?>

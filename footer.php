@@ -13,10 +13,11 @@
           <h3>TechSolutions</h3>
         </div>
       </div>
-
-      <a href="#"><div class="contact-button">
+      <a href="<?php echo esc_url(get_permalink(get_page_by_path('contact'))); ?>">
+    <div class="contact-button">
         Contact Us
-      </div></a>
+    </div>
+</a>
       
       <div class="footer-divider"></div>
 

@@ -4,6 +4,14 @@ function merlin_theme_styles() {
 }
 add_action('wp_enqueue_scripts', 'merlin_theme_styles');
 
+function enqueue_scripts() {
+    wp_enqueue_script('jquery');
+}
+add_action('wp_enqueue_scripts', 'enqueue_scripts');
+
+
+
+
 register_nav_menus(array(
     'primary' => __('Primary Menu'),
     'footer' => __('Footer Menu')
@@ -11,29 +19,45 @@ register_nav_menus(array(
 
 // Custom Post Type Creation
 function create_posttype() {
-    register_post_type( 'wp_person',
-        array(
-            'labels' => array(
-                'name' => __( 'People' ),
-                'singular_name' => __( 'Person' )
-            ),
-            'public' => true,
-            'has_archive' => true,
-            'rewrite' => array('slug' => 'people'),
-        )
-    );
-    register_post_type( 'dog_training',
-        array(
-            'labels' => array(
-                'name' => __( 'Dog Trainings' ),
-                'singular_name' => __( 'Dog Training' )
-            ),
-            'public' => true,
-            'has_archive' => true,
-            'rewrite' => array('slug' => 'dog-trainings'),
-            'supports' => array( 'title', 'editor', 'thumbnail', 'excerpt' ),
-        )
-    );
+
+
+    register_post_type( 'services',
+    array(
+        'labels' => array(
+            'name' => __( 'Services' ),
+            'singular_name' => __( 'Service' )
+        ),
+        'public' => true,
+        'has_archive' => true,
+        'rewrite' => array('slug' => 'services'),
+        'supports' => array( 'title', 'editor', 'client', 'thumbnail', 'excerpt' ),
+    )
+);
+
+    register_post_type( 'testimonial',
+    array(
+        'labels' => array(
+            'name' => __( 'Testimonials' ),
+            'singular_name' => __( 'Testimonial' )
+        ),
+        'public' => true,
+        'has_archive' => true,
+        'supports' => array( 'title', 'editor','client'),
+    )
+);
+register_post_type('faq',
+array(
+    'labels' => array(
+        'name' => __('FAQs'),
+        'singular_name' => __('FAQ')
+    ),
+    'public' => true,
+    'has_archive' => true,
+    'rewrite' => array('slug' => 'faq'),
+    'supports' => array('title', 'editor'),
+)
+);
+
 }
 add_action( 'init', 'create_posttype' );
 
