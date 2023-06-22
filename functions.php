@@ -13,9 +13,7 @@ add_action('wp_enqueue_scripts', 'enqueue_scripts');
 
 
 register_nav_menus(array(
-    'primary' => __('Primary Menu'),
-    'footer' => __('Footer Menu')
-));
+    'primary' => __('Primary Menu')));
 
 // Custom Post Type Creation
 function create_posttype() {
@@ -29,8 +27,7 @@ function create_posttype() {
         ),
         'public' => true,
         'has_archive' => true,
-        'rewrite' => array('slug' => 'services'),
-        'supports' => array( 'title', 'editor', 'client', 'thumbnail', 'excerpt' ),
+        'supports' => array( 'title', 'editor', 'thumbnail', 'excerpt' ),
     )
 );
 
@@ -42,22 +39,20 @@ function create_posttype() {
         ),
         'public' => true,
         'has_archive' => true,
-        'supports' => array( 'title', 'editor','client'),
+        'supports' => array( 'title', 'editor'),
     )
 );
 register_post_type('faq',
-array(
-    'labels' => array(
-        'name' => __('FAQs'),
-        'singular_name' => __('FAQ')
-    ),
-    'public' => true,
-    'has_archive' => true,
-    'rewrite' => array('slug' => 'faq'),
-    'supports' => array('title', 'editor'),
-)
+    array(
+        'labels' => array(
+            'name' => __('FAQs'),
+            'singular_name' => __('FAQ')
+        ),
+        'public' => true,
+        'has_archive' => true,
+        'supports' => array('title', 'editor'),
+    )
 );
-
 }
 add_action( 'init', 'create_posttype' );
 
@@ -66,9 +61,6 @@ add_theme_support( 'post-thumbnails' );
 
 
 function custom_theme_fonts() {
-    wp_enqueue_style('Montserrat', get_template_directory_uri() . './fonts/Montserrat.ttf');
-    wp_enqueue_style('SourceSansPro', get_template_directory_uri() . './fonts/SourceSansPro.otf');
-    wp_enqueue_style('Karla', get_template_directory_uri() . './fonts/Karla.ttf');
-  }
-  
-  add_action('wp_enqueue_scripts', 'custom_theme_fonts');
+    wp_enqueue_style('custom-fonts', get_template_directory_uri() . '/fonts.css');
+}
+add_action('wp_enqueue_scripts', 'custom_theme_fonts');

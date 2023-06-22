@@ -1,20 +1,23 @@
 <?php
+/*
+Template Name: home
+*/
     get_header();
 ?>
 <!-- above this comment is header.php -->
 
 <div style="position: relative; display: flex; align-items: center;">
-    <img src="<?php echo get_theme_image_url('background1.jpg'); ?>" style="width: 100%; height: auto; display: block;" />
+    <img src="<?php echo get_theme_image_url('background1.jpg'); ?>" style="width: 100%; height: 400px; object-fit:cover; display: block;" />
     <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; color: white; width: 100%;">
-        <h1 style="margin: 0;">TechSolutions: Has been empowering you with expert computer repairs for years, ensuring a seamless digital journey.</h1>
-        <a style="color: white;" href="<?php echo home_url('/services/'); ?>">Book Online</a>
+        <h1 style="margin: 0 30px 120px 30px; font-size:30px;">TechSolutions has been empowering you with expert computer repairs for years, ensuring a seamless digital journey.</h1>
+        <a style="color: #fff; padding:12px 16px; background-color:#708090; border-radius:8px; font-weight:700; font-size:20px;" href="<?php echo home_url('/services/'); ?>">Book Online</a>
     </div>
 </div>
 
 
 
 <div class="services-section">
-    <h1 style="text-align: center;">Services</h1>
+    <h1 style="text-align: center;">Our Services</h1>
     <div class="services-wrapper">
         <?php
             $args = array(
@@ -30,7 +33,7 @@
                     ?>
                     <div class="service-item">
                         <?php if (has_post_thumbnail()) { ?>
-                            <div class="service-image" style="text-align:center;">
+                            <div class="service-image">
                                 <?php the_post_thumbnail('thumbnail');?>
                             </div>
                         <?php } ?>
@@ -49,9 +52,9 @@
 </div>
 
 
-<div style="background-color: #f2f2f2; padding: 20px;">
-    <h1 style="text-align:center;">Testimonials</h1>
-    <div style="display: flex; justify-content: space-between;">
+<div class="testimonials-section">
+    <h1 style="text-align: center;">Testimonials</h1>
+    <div class="testimonials-wrapper">
         <?php
             $args = array(
                 'post_type' => 'testimonial',
@@ -65,11 +68,7 @@
                     $testimonial_query->the_post();
                     ?>
                     <div class="testimonial-item">
-                        <?php if (has_post_thumbnail()) { ?>
-                            <div>
-                                <?php the_post_thumbnail('thumbnail'); ?>
-                            </div>
-                        <?php } ?>
+
                         <h3><?php the_title(); ?></h3>
                         <?php the_content(); ?>
                     </div>

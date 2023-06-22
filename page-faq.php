@@ -1,8 +1,12 @@
+
 <?php
+/*
+Template Name: faq
+*/
+
     get_header();
 ?>
 <!-- above this comment is header.php -->
-
 
 <div class="faq-section">
   <h1 style="margin-bottom:4%;">Frequently Asked Questions</h1>

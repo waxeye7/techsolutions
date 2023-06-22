@@ -1,11 +1,15 @@
 <?php
+/*
+Template Name: services
+*/
+
     get_header();
 ?>
 <!-- above this comment is header.php -->
 
 
 <div class="services-section">
-    <h1 style="text-align: center;">Services</h1>
+    <h1 style="text-align: center;">Learn what we have to offer here at TechSolutions</h1>
     <div class="services-page-services-wrapper">
         <?php
             $args = array(
@@ -23,7 +27,7 @@
                     <div class="service-item">
                         <?php if (has_post_thumbnail()) { ?>
                             <div class="service-image" style="text-align:center;">
-                                <?php the_post_thumbnail('thumbnail');?>
+                                <?php the_post_thumbnail('full');?>
                             </div>
                         <?php } ?>
                         <h3 class="service-title"><?php the_title(); ?></h3>
