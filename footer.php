@@ -9,9 +9,11 @@
             <img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt="Logo">
           </a>
         </div>
-        <div class="tech-solutions">
-          <h3>TechSolutions</h3>
-        </div>
+        <a href="<?php echo home_url(); ?>">
+        <h3 style="color:#fefefe;"><?php bloginfo('name'); ?></h3>
+            </a>
+
+          
       </div>
       <a href="<?php echo esc_url(get_permalink(get_page_by_path('contact'))); ?>">
     <div class="contact-button">

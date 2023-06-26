@@ -7,10 +7,10 @@ Template Name: home
 <!-- above this comment is header.php -->
 
 <div style="position: relative; display: flex; align-items: center;">
-    <img src="<?php echo get_theme_image_url('background1.jpg'); ?>" style="width: 100%; height: 400px; object-fit:cover; display: block;" />
+    <img src="<?php echo get_theme_image_url('background.jpg'); ?>" style="width: 100%; height: 400px; object-fit:cover; display: block;" />
     <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; color: white; width: 100%;">
-        <h1 style="margin: 0 30px 120px 30px; font-size:30px;">TechSolutions has been empowering you with expert computer repairs for years, ensuring a seamless digital journey.</h1>
-        <a style="color: #fff; padding:12px 16px; background-color:#708090; border-radius:8px; font-weight:700; font-size:20px;" href="<?php echo home_url('/services/'); ?>">Book Online</a>
+        <h1 style="margin: 0 30px 60px 30px;" class="lower-font-size-on-low-width">Experience seamless digital navigation with TechSolutions, your expert in swift, reliable computer repairs.</h1>
+        <a style="color: #000; padding:12px 16px; background-color:#fff; border-radius:8px; font-weight:700; font-size:20px;" href="<?php echo home_url('/contact/'); ?>">Phone Us</a>
     </div>
 </div>
 
@@ -53,7 +53,7 @@ Template Name: home
 
 
 <div class="testimonials-section">
-    <h1 style="text-align: center;">Testimonials</h1>
+    <h1 style="text-align: center;">What our Customers say</h1>
     <div class="testimonials-wrapper">
         <?php
             $args = array(

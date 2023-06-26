@@ -59,8 +59,3 @@ add_action( 'init', 'create_posttype' );
 // Enable 'Featured Images' for posts/pages/custom posts
 add_theme_support( 'post-thumbnails' );
 
-
-function custom_theme_fonts() {
-    wp_enqueue_style('custom-fonts', get_template_directory_uri() . '/fonts.css');
-}
-add_action('wp_enqueue_scripts', 'custom_theme_fonts');

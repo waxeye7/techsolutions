@@ -37,6 +37,22 @@ body {
   font-weight: 700;
 }
 
+input {
+  box-sizing: border-box;
+  font-family: "Karla", "Roboto", sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+}
+.hover-style:hover {
+  opacity: 0.75;
+}
+textarea {
+  box-sizing: border-box;
+  font-size: 18px;
+  font-family: "Karla", "Roboto", sans-serif;
+  font-weight: 300;
+}
+
 .container {
   flex: 1;
   display: flex;
@@ -349,11 +365,13 @@ ul {
   margin: 12px 4px;
   background-color: #f2f2f2;
   border-radius: 4px;
-  transition: background-color 0.3s ease;
+  transition: background-color, transform 0.4s ease;
+  font-size: 20px;
 }
 
 .question-item:hover {
-  background-color: #ddd;
+  background-color: #ffffff;
+  transform: scale(1.05);
 }
 
 .answers-section {
@@ -376,7 +394,9 @@ ul {
 .answer-container {
   display: none;
 }
-
+.answer-container p {
+  font-size: 18px;
+}
 .answer-container.show {
   display: flex;
   align-items: center;
@@ -446,30 +466,29 @@ ul {
   border-radius: 5px;
 }
 .contact-section {
-  padding: 60px 0;
+  padding: 20px 0;
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 100%;
 }
 
 .contact-section h2 {
   font-size: 28px;
   font-weight: 600;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
 .contact-info {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
 .contact-info-item {
+  margin: auto 20px;
   width: 300px;
-  margin: 20px;
   padding: 20px;
   background-color: #fff;
   border-radius: 4px;
@@ -490,6 +509,12 @@ ul {
 .contact-info-item p {
   font-size: 16px;
   margin-bottom: 10px;
+}
+.lower-font-size-on-low-width {
+  font-size: 30px;
+}
+.tech-solutions {
+  color: white;
 }
 @media screen and (max-width: 1500px) {
   .about-section {
@@ -533,6 +558,12 @@ ul {
   }
 }
 
+@media screen and (max-width: 735px) {
+  .contact-info-item {
+    margin: 20px;
+  }
+}
+
 @media screen and (max-width: 700px) {
   .menu li {
     font-size: 14px;
@@ -557,7 +588,7 @@ ul {
     font-size: 16px;
   }
 }
-@media screen and (max-width: 460px) {
+@media screen and (max-width: 470px) {
   .menu li {
     font-size: 14px;
   }
@@ -569,5 +600,16 @@ ul {
   }
   .remove-on-small {
     display: none;
+  }
+  .lower-font-size-on-low-width {
+    font-size: 22px;
+  }
+}
+
+@media screen and (max-width: 435px) {
+  .contact-info-item {
+    width: inherit;
+    max-width: 300px;
+    font-size: 14px;
   }
 }
